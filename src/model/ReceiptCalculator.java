@@ -20,7 +20,7 @@ public class ReceiptCalculator {
 		fourx = fourxsix;
 		w = wallet;
 		
-		setReceiptint(eightxten, fourxsix, wallet);
+		setReceipt(eightxten, fourxsix, wallet);
 	}
 	
 	public int getEightxten() {
@@ -46,7 +46,7 @@ public class ReceiptCalculator {
 	public void setWallet(int wallet) {
 		this.wallet = wallet;
 	}
-	public void setReceiptint (int eightx, int fourx, int w ) {
+	public void setReceipt (int eightx, int fourx, int w ) {
 		priceEight = eightx * 3;
 		priceFour = fourx * 3;
 		priceWallet = w * 3;
@@ -57,6 +57,6 @@ public class ReceiptCalculator {
 		priceFour = this.priceFour;
 		priceWallet = this.wallet;
 		
-		return "Full Receipt:\n" + "8x10 ---> " + priceEight;
+		return "Full Receipt:\n" + "8x10 ---> " + priceEight + "\n4x8 ---> " + priceFour + "\nWallet ---> " + priceWallet;
 	}
 }
