@@ -21,4 +21,5 @@ Enter the number of Wallets you have:
 <input type="submit" value="Calculate Receipt" />
 </form>
 </body>
+
 </html>

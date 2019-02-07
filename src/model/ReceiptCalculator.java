@@ -5,9 +5,7 @@ public class ReceiptCalculator {
 	private int eightxten;
 	private int fourxsix;
 	private int wallet;
-	private int priceEight;
-	private int priceFour;
-	private int priceWallet;
+	private int total;
 	
 	public ReceiptCalculator() {
 		super();
@@ -16,13 +14,21 @@ public class ReceiptCalculator {
 
 	public ReceiptCalculator(int eightx, int fourx, int w) {
 		super();
-		eightx = eightxten;
-		fourx = fourxsix;
-		w = wallet;
+		eightxten = eightx;
+		fourxsix = fourx;
+		wallet = w;
 		
 		setReceipt(eightxten, fourxsix, wallet);
 	}
 	
+	public int getTotal() {
+		return total;
+	}
+
+	public void setTotal(int total) {
+		this.total = total;
+	}
+
 	public int getEightxten() {
 			return eightxten;
 		}
@@ -47,16 +53,14 @@ public class ReceiptCalculator {
 		this.wallet = wallet;
 	}
 	public void setReceipt (int eightx, int fourx, int w ) {
-		priceEight = eightx * 3;
-		priceFour = fourx * 3;
-		priceWallet = w * 3;
+		eightxten = eightx * 15;
+		fourxsix = fourx * 10;
+		wallet = w * 3;
+		
+		total = eightxten + fourxsix + wallet;
 	}
 	
 	public String toString() {
-		priceEight = this.priceEight;
-		priceFour = this.priceFour;
-		priceWallet = this.wallet;
-		
-		return "Full Receipt:\n" + "8x10 ---> " + priceEight + "\n4x8 ---> " + priceFour + "\nWallet ---> " + priceWallet;
+		return "Hello" ;
 	}
 }

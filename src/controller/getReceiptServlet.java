@@ -32,17 +32,20 @@ public class getReceiptServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String userReceipt = request.getParameter("userReceipt");
+		String userReceipt8 = request.getParameter("8x10");
+		String userReceipt4 = request.getParameter("4x6");
+		String userReceiptW = request.getParameter("Wallet");
 		
-		ReceiptCalculator receipt = new ReceiptCalculator();
+		ReceiptCalculator receipt = new ReceiptCalculator(Integer.parseInt(userReceipt8), Integer.parseInt(userReceipt4), Integer.parseInt(userReceiptW));
+		//ReceiptCalculator hello = new ReceiptCalculator();
 		
-		request.setAttribute("userReceipt", userReceipt);
+		request.setAttribute("userReceipt", receipt);
 		
 		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
 		
-		PrintWriter writer = response.getWriter();
-		writer.println(receipt.toString());
-		writer.close();
+		//PrintWriter writer = response.getWriter();
+		//writer.println(hello.toString());
+		//writer.close();
 	}
 
 }
