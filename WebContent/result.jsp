@@ -13,7 +13,8 @@
 &#36;${userReceipt.getFourxsix()} 4x6's <br />
 &#36;${userReceipt.getWallet()} Wallets <br />
 &#36;${userReceipt.getTotal()} Total price <br />
-
 </p>
+<a href="index.jsp">Click to Create different Receipt</a>
+
 </body>
 </html>
