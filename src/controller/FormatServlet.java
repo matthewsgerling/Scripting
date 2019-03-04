@@ -36,7 +36,7 @@ public class FormatServlet extends HttpServlet {
 		String lname = request.getParameter("lname");
 		String age = request.getParameter("age");
 		
-		FormCreator format = new FormCreator();
+		FormCreator format = new FormCreator(fname, lname, age);
 		//ReceiptCalculator hello = new ReceiptCalculator();
 		
 		request.setAttribute("Format", format);

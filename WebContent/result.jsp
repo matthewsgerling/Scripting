@@ -8,15 +8,13 @@
 <title>Results</title>
 </head>
 <body>
-<p>${FormCreator.getFormat()} <br />
+<p>${scriptFormat.getFormat()} <br />
 Full name:
 ${Format.getFName()} <br />
 ${Format.getLName()}<br />
 Age:
 ${Format.getAge()}<br />
-
 </p>
 <a href="index.jsp">Click to go again</a>
-
 </body>
 </html>
