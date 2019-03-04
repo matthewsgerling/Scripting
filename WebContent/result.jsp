@@ -8,9 +8,11 @@
 <title>Results</title>
 </head>
 <body>
-<p>${FormCreator.FormCreator()} <br />
+<p>${FormCreator.getFormat()} <br />
+Full name:
 ${Format.getFName()} <br />
 ${Format.getLName()}<br />
+Age:
 ${Format.getAge()}<br />
 
 </p>
