@@ -8,7 +8,7 @@
 <title>Results</title>
 </head>
 <body>
-<p>${FormCreator.Format()} <br />
+<p>${FormCreator.FormCreator()} <br />
 ${Format.getFName()} <br />
 ${Format.getLName()}<br />
 ${Format.getAge()}<br />

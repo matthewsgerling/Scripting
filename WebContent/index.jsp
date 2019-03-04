@@ -41,6 +41,7 @@ Enter Last name:
 Enter Age:
 <input type="text" name="age" size="10">
 <br>
+<input type = "submit" value="Submit">
 </form>
 </body>
 
