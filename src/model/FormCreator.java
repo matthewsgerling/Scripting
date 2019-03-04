@@ -1,18 +1,18 @@
 package model;
 
-public class ReceiptCalculator {
+public class FormCreator {
 	
 	private int eightxten;
 	private int fourxsix;
 	private int wallet;
 	private int total;
 	
-	public ReceiptCalculator() {
+	public FormCreator() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public ReceiptCalculator(int eightx, int fourx, int w) {
+	public FormCreator(int eightx, int fourx, int w) {
 		super();
 		eightxten = eightx;
 		fourxsix = fourx;

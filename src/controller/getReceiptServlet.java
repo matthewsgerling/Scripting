@@ -1,6 +1,6 @@
 package controller;
 
-import model.ReceiptCalculator;
+import model.FormCreator;
 
 
 import java.io.IOException;
@@ -36,7 +36,7 @@ public class getReceiptServlet extends HttpServlet {
 		String userReceipt4 = request.getParameter("4x6");
 		String userReceiptW = request.getParameter("Wallet");
 		
-		ReceiptCalculator receipt = new ReceiptCalculator(Integer.parseInt(userReceipt8), Integer.parseInt(userReceipt4), Integer.parseInt(userReceiptW));
+		FormCreator receipt = new FormCreator(Integer.parseInt(userReceipt8), Integer.parseInt(userReceipt4), Integer.parseInt(userReceiptW));
 		//ReceiptCalculator hello = new ReceiptCalculator();
 		
 		request.setAttribute("userReceipt", receipt);
