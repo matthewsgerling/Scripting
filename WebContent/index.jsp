@@ -3,22 +3,44 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script> 
+function format() {
+	var fname = document.forms["FormatServlet"]["fname"]; 
+	var lname = document.forms["FormatServlet"]["lname"]; 
+	var age = document.forms["FormatServlet"]["age"]; 
+	
+	if (fname.value == ""){ 
+        window.alert("Please enter your First name."); 
+        return false; 
+    }
+	
+	if (lname.value == ""){ 
+        window.alert("Please enter your Last name."); 
+        return false; 
+    } 
+	
+	if (age.value == ""){ 
+        window.alert("Please enter your Age."); 
+        return false; 
+    } 
+	return true;
+}
+</script>
 <meta charset="ISO-8859-1">
-<title>Photo Receipt</title>
+<title>Scripting</title>
 </head>
 <body>
-<h1>Photo Receipt</h1>
-<form action="getReceiptServlet" method="post">
-Enter the number of 8x10 pictures you have:
-<input type="text" name="8x10" size="10">
+<h1>Format</h1>
+<form name="FormatServlet" action="FormatServlet" onsubmit="return format()" method="post">
+Enter First name:
+<input type="text" name="fname" size="10">
 <br>
-Enter the number of 4x6 pictures you have:
-<input type="text" name="4x6" size="10">
+Enter Last name:
+<input type="text" name="lname" size="10">
 <br>
-Enter the number of Wallets you have:
-<input type="text" name="Wallet" size="10">
+Enter Age:
+<input type="text" name="age" size="10">
 <br>
-<input type="submit" value="Calculate Receipt" />
 </form>
 </body>
 

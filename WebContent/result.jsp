@@ -8,13 +8,13 @@
 <title>Results</title>
 </head>
 <body>
-<p>${userPhotoReceipt.getReceipt()} Your Receipt is: <br />
-&#36;${userReceipt.getEightxten()} 8x10's <br />
-&#36;${userReceipt.getFourxsix()} 4x6's <br />
-&#36;${userReceipt.getWallet()} Wallets <br />
-&#36;${userReceipt.getTotal()} Total price <br />
+<p>${FormCreator.Format()} <br />
+${Format.getFName()} <br />
+${Format.getLName()}<br />
+${Format.getAge()}<br />
+
 </p>
-<a href="index.jsp">Click to Create different Receipt</a>
+<a href="index.jsp">Click to go again</a>
 
 </body>
 </html>

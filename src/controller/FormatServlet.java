@@ -15,14 +15,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class getReceiptServlet
  */
-@WebServlet("/getReceiptServlet")
-public class getReceiptServlet extends HttpServlet {
+@WebServlet("/FormatServlet")
+public class FormatServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public getReceiptServlet() {
+    public FormatServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +32,14 @@ public class getReceiptServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String userReceipt8 = request.getParameter("8x10");
-		String userReceipt4 = request.getParameter("4x6");
-		String userReceiptW = request.getParameter("Wallet");
+		String fname = request.getParameter("fname");
+		String lname = request.getParameter("lname");
+		String age = request.getParameter("age");
 		
-		FormCreator receipt = new FormCreator(Integer.parseInt(userReceipt8), Integer.parseInt(userReceipt4), Integer.parseInt(userReceiptW));
+		FormCreator format = new FormCreator();
 		//ReceiptCalculator hello = new ReceiptCalculator();
 		
-		request.setAttribute("userReceipt", receipt);
+		request.setAttribute("Format", format);
 		
 		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
 		

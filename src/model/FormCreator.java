@@ -1,66 +1,56 @@
 package model;
 
 public class FormCreator {
+	private String FName;
+	private String LName;
+	private String Age;
 	
-	private int eightxten;
-	private int fourxsix;
-	private int wallet;
-	private int total;
+	
 	
 	public FormCreator() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public FormCreator(int eightx, int fourx, int w) {
-		super();
-		eightxten = eightx;
-		fourxsix = fourx;
-		wallet = w;
+	public FormCreator(String fname, String lname, String a) {
+		Format(fname, lname, a);
+	}
+	
+	
+	public String getFName() {
+		return FName;
+	}
+
+	public void setFName(String fName) {
+		FName = fName;
+	}
+
+	public String getLName() {
+		return LName;
+	}
+
+	public void setLName(String lName) {
+		LName = lName;
+	}
+
+	public String getAge() {
+		return Age;
+	}
+
+	public void setAge(String age) {
+		Age = age;
+	}
+
+	
+	
+	public void Format (String fname, String lname, String a ) {
+		String partfn = fname.substring(0,1);
+		String partln = lname.substring(0,1);
+		String lastpartfn = fname.substring(1);
+		String lastpartln = lname.substring(1);
 		
-		setReceipt(eightxten, fourxsix, wallet);
-	}
-	
-	public int getTotal() {
-		return total;
-	}
-
-	public void setTotal(int total) {
-		this.total = total;
-	}
-
-	public int getEightxten() {
-			return eightxten;
-		}
-
-	public void setEightxten(int eightxten) {
-		this.eightxten = eightxten;
-	}
-	
-	public int getFourxsix() {
-		return fourxsix;
-	}
-
-	public void setFourxsix(int fourxsix) {
-		this.fourxsix = fourxsix;
-	}
-
-	public int getWallet() {
-		return wallet;
-	}
-
-	public void setWallet(int wallet) {
-		this.wallet = wallet;
-	}
-	public void setReceipt (int eightx, int fourx, int w ) {
-		eightxten = eightx * 15;
-		fourxsix = fourx * 10;
-		wallet = w * 3;
-		
-		total = eightxten + fourxsix + wallet;
-	}
-	
-	public String toString() {
-		return "Hello" ;
+		FName = partfn + lastpartfn;
+		LName = partln + lastpartln;
+		Age = a;
 	}
 }
