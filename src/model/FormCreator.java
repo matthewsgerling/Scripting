@@ -44,13 +44,9 @@ public class FormCreator {
 	
 	
 	public void Format (String fname, String lname, String a ) {
-		String partfn = fname.substring(0,1);
-		String partln = lname.substring(0,1);
-		String lastpartfn = fname.substring(1);
-		String lastpartln = lname.substring(1);
 		
-		FName = partfn + lastpartfn;
-		LName = partln + lastpartln;
+		FName = fname;
+		LName = lname;
 		Age = a;
 	}
 }
